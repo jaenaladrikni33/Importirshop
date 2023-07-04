@@ -149,7 +149,57 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-header">MAIN</li>
+                        <li class="nav-item menu-open">
+                            <a href="{{ url('kategoris') }}"
+                                class="nav-link {{ request()->is('kategoris') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    KATEGORI
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item menu-open">
+                            <a href="{{ url('produks') }}"
+                                class="nav-link {{ request()->is('produks') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    PRODUK
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item menu-open">
+                            <a href="{{ url('members') }}"
+                                class="nav-link {{ request()->is('members') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    MEMBER
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-header">TRANSACTION</li>
+                        <li class="nav-item menu-open">
+                            <a href="{{ url('penjualans') }}"
+                                class="nav-link {{ request()->is('penjualans') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    PENJUALAN
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-header">REPORT</li>
+                        <li class="nav-item menu-open">
+                            <a href="{{ url('reports') }}"
+                                class="nav-link {{ request()->is('reports') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    LAPORAN
+                                </p>
+                            </a>
+                        </li>
 
                 </nav>
                 <!-- /.sidebar-menu -->
