@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', fn () => redirect('login'));
+Route::get('/', function () {
+    return redirect()->route('login');
+});
 
 Auth::routes();
 
@@ -22,3 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('/members', App\Http\Controllers\MemberController::class);
+Route::resource('/produks', App\Http\Controllers\ProdukController::class);
+Route::resource('/kategoris', App\Http\Controllers\KategoriController::class);
+Route::get('/api/members', [App\Http\Controllers\MemberController::class, 'api']);
+Route::get('/api/kategoris', [App\Http\Controllers\KategoriController::class, 'api']);

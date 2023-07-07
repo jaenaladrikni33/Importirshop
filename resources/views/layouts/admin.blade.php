@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+    @yield('css')
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -123,19 +124,6 @@
                     </div>
                 </div>
 
-                <!-- SidebarSearch Form -->
-                <div class="form-inline">
-                    <div class="input-group" data-widget="sidebar-search">
-                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-sidebar">
-                                <i class="fas fa-search fa-fw"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -153,7 +141,7 @@
                         <li class="nav-item menu-open">
                             <a href="{{ url('kategoris') }}"
                                 class="nav-link {{ request()->is('kategoris') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="fa fa-cube"></i>
                                 <p>
                                     KATEGORI
                                 </p>
@@ -163,7 +151,7 @@
                         <li class="nav-item menu-open">
                             <a href="{{ url('produks') }}"
                                 class="nav-link {{ request()->is('produks') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="fa fa-cubes"></i>
                                 <p>
                                     PRODUK
                                 </p>
@@ -173,7 +161,7 @@
                         <li class="nav-item menu-open">
                             <a href="{{ url('members') }}"
                                 class="nav-link {{ request()->is('members') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="fa fa-id-card"></i>
                                 <p>
                                     MEMBER
                                 </p>
@@ -183,7 +171,7 @@
                         <li class="nav-item menu-open">
                             <a href="{{ url('penjualans') }}"
                                 class="nav-link {{ request()->is('penjualans') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="fa fa-cart-arrow-down"></i>
                                 <p>
                                     PENJUALAN
                                 </p>
@@ -194,7 +182,7 @@
                         <li class="nav-item menu-open">
                             <a href="{{ url('reports') }}"
                                 class="nav-link {{ request()->is('reports') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-file-contract"></i>
                                 <p>
                                     LAPORAN
                                 </p>
@@ -263,6 +251,9 @@
     <script src="{{ asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    @yield('js')
 </body>
 
 </html>

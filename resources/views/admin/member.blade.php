@@ -15,15 +15,16 @@
                 <div class="card">
                     <div class="card-header">
 
-                        <a href="#" @click="addData()" class="btn btn-sm btn-primary pull-right">Create New
-                            Member</a>
+                        <a href="#" @click="addData()" class="btn btn-success btn-xs btn-flat"><i
+                                class="fa fa-plus-circle"></i> New Member
+                        </a>
                     </div>
 
                     <div class="card-body p-0">
                         <table id="datatable" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th widht="30px">No</th>
+                                    <th widht="10px">No</th>
                                     <th class="text-center">Name</th>
                                     <th class="text-center">Email</th>
                                     <th class="text-center">Phone Number</th>

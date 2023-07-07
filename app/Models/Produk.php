@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Produk extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'kategori_id'];
+
+    public function Kategori()
+
+    {
+        return $this->belongsTo('App\Models\Kategori', 'kategori_id');
+    }
 }

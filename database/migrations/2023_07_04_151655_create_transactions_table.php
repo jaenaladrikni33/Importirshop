@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('member_id');
+            $table->integer('total_item');
+            $table->integer('total_harga');
+            $table->integer('bayar')->default(0);
+            $table->integer('diterima')->default(0);
             $table->timestamps();
         });
     }
