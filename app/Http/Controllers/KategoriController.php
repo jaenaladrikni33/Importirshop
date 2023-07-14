@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -19,6 +20,7 @@ class KategoriController extends Controller
     public function index()
     {
         $kategoris = Kategori::all();
+        $produks = Produk::all();
 
         //return $kategoris;        
         return view('admin.kategori', compact('kategoris'));

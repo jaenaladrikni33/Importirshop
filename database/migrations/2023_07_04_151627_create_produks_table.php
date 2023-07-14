@@ -13,15 +13,13 @@ return new class extends Migration
     {
         Schema::create('produks', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('kategori_id');
             $table->string('name');
+            $table->foreignId('kategori_id')->constrained();
             $table->string('merk');
             $table->integer('harga_beli');
             $table->integer('harga_jual');
             $table->integer('stok');
             $table->timestamps();
-
-            $table->foreign('kategori_id')->references('id')->on('kategoris');
         });
     }
 

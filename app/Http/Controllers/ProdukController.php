@@ -14,11 +14,11 @@ class Produkcontroller extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::all();
-        $produk = Produk::all();
-        $member = Member::all();
-
-        return view('admin.produk', compact('kategoris'));
+        $kategoris = Kategori::all();
+        $members = Member::all();
+        //return $kategori;
+        //return $member;
+        return view('admin.produk', compact('kategoris', 'members'));
     }
     public function api()
     {
@@ -40,9 +40,12 @@ class Produkcontroller extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'id' => ['required'],
-            'Produk_id' => ['required'],
-            'kategori_id' => ['required'],
+            'id'             => ['required'],
+            'kategori_id'    => ['required'],
+            'merk'           => ['required'],
+            'harga_beli'     => ['required'],
+            'harga_jual'     => ['required'],
+            'stok'           => ['required'],
         ]);
 
         Produk::create($request->all());
@@ -72,9 +75,12 @@ class Produkcontroller extends Controller
     public function update(Request $request, Produk $produk)
     {
         $this->validate($request, [
-            'id' => ['required'],
-            'Produk_id' => ['required'],
-            'kategori_id' => ['required'],
+            'id'             => ['required'],
+            'kategori_id'    => ['required'],
+            'merk'           => ['required'],
+            'harga_beli'     => ['required'],
+            'harga_jual'     => ['required'],
+            'stok'           => ['required'],
         ]);
 
         Produk::create($request->all());

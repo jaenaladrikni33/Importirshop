@@ -21,7 +21,6 @@ class ProdukSeeder extends Seeder
             $produk = new produk;
 
             $produk->name = $faker->name;
-            $produk->member_id = rand(1, 10);
             $produk->kategori_id = rand(1, 10);
             $produk->stok = rand(10, 20);
             $produk->harga_jual = rand(10000, 20000);

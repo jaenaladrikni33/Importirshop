@@ -28,3 +28,4 @@ Route::resource('/produks', App\Http\Controllers\ProdukController::class);
 Route::resource('/kategoris', App\Http\Controllers\KategoriController::class);
 Route::get('/api/members', [App\Http\Controllers\MemberController::class, 'api']);
 Route::get('/api/kategoris', [App\Http\Controllers\KategoriController::class, 'api']);
+Route::get('/api/produks', [App\Http\Controllers\ProdukController::class, 'api']);

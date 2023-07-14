@@ -26,6 +26,7 @@
                                 <tr>
                                     <th widht="10px">No</th>
                                     <th class="text-center">Name Kategori</th>
+                                    <th class="text-center">Total Produk</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -96,6 +97,10 @@
             {
                 data: 'name',
                 class: 'text-center',
+                orderable: false
+            },
+            {
+                data: 'name',
                 orderable: false
             },
             {
